@@ -1,4 +1,4 @@
-var numArray = [1, 3, 5, 7, 9, 20, 100, 4];
+var numArray = [1, 3, 5, 7, 9, 20, 100, 4]
 
 var objArray = [
   { product: 'tennis ball', price: 3 },
@@ -16,6 +16,7 @@ for (var i = 0; i < numArray.length; i++) {
   // Statement inside here
   console.log(numArray[i])
 }
+
 
 // Write a FOR loop that:
   // iterates through numArray
@@ -45,15 +46,37 @@ for (var i = 0; i < objArray.length; i++) {
   // construct a sentence: console.log product name followed by its price
   // SAMPLE: "football costs 20 dollars"
 
+for (var i = 0; i < objArray.length; i++) {
+  var productName = objArray[i].product
+  var productPrice = objArray[i].price
+  // some kind of string concatenation
+  var sentence = productName + ' costs ' + productPrice + ' dollars.'
+
+  console.log(sentence)
+}
 
 
 // Write a FOR loop that:
   // iterates through objArray
   // only console.logs product names of products that have a price greater than 10
+  // Desired output: "volleyball, football"
 
+
+for (var i = 0; i < objArray.length; i++) {
+  if (objArray[i].price > 10) {
+    // statement: runs if condition is true
+
+    var productName = objArray[i].product
+    console.log(productName)
+  }
+}
 
 
 // Write a FOR loop that:
   // iterates BACKWARDS through numArray
   // console.logs current value
 
+// We need to update our FOR loop's setup expressions to loop backwards
+for (var i = numArray.length - 1; i >= 0; i--) {
+  console.log(numArray[i])
+}
